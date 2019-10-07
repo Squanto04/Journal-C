@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		353D69DA234BC906003302F0 /* JLEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 353D69D9234BC906003302F0 /* JLEntry.m */; };
 		35B16E77234BC80E00F002CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B16E76234BC80E00F002CA /* AppDelegate.m */; };
 		35B16E7D234BC80E00F002CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35B16E7B234BC80E00F002CA /* Main.storyboard */; };
 		35B16E7F234BC80F00F002CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35B16E7E234BC80F00F002CA /* Assets.xcassets */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		353D69D8234BC906003302F0 /* JLEntry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLEntry.h; sourceTree = "<group>"; };
+		353D69D9234BC906003302F0 /* JLEntry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLEntry.m; sourceTree = "<group>"; };
 		35B16E72234BC80E00F002CA /* Journal-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Journal-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35B16E75234BC80E00F002CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		35B16E76234BC80E00F002CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -36,6 +39,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		353D69D7234BC8E9003302F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				353D69D8234BC906003302F0 /* JLEntry.h */,
+				353D69D9234BC906003302F0 /* JLEntry.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		35B16E69234BC80E00F002CA = {
 			isa = PBXGroup;
 			children = (
@@ -55,6 +67,7 @@
 		35B16E74234BC80E00F002CA /* Journal-C */ = {
 			isa = PBXGroup;
 			children = (
+				353D69D7234BC8E9003302F0 /* Model */,
 				35B16E8C234BC82800F002CA /* Views */,
 				35B16E8B234BC81B00F002CA /* Resources */,
 			);
@@ -108,6 +121,7 @@
 		35B16E6A234BC80E00F002CA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JL;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Squanto Inc";
 				TargetAttributes = {
@@ -154,6 +168,7 @@
 			files = (
 				35B16E85234BC80F00F002CA /* main.m in Sources */,
 				35B16E77234BC80E00F002CA /* AppDelegate.m in Sources */,
+				353D69DA234BC906003302F0 /* JLEntry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +312,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EANQJ7L949;
-				INFOPLIST_FILE = "Journal-C/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Journal-C/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,7 +329,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EANQJ7L949;
-				INFOPLIST_FILE = "Journal-C/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Journal-C/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
