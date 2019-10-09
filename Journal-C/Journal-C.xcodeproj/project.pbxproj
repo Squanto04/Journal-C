@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		353D69DA234BC906003302F0 /* JLEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 353D69D9234BC906003302F0 /* JLEntry.m */; };
+		353D69DD234BCF84003302F0 /* JLEntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 353D69DC234BCF84003302F0 /* JLEntryController.m */; };
+		353D69E2234BD73D003302F0 /* JLEntryListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 353D69E1234BD73D003302F0 /* JLEntryListTableViewController.m */; };
+		353D69E5234BDD30003302F0 /* JLEntryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 353D69E4234BDD30003302F0 /* JLEntryDetailViewController.m */; };
 		35B16E77234BC80E00F002CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B16E76234BC80E00F002CA /* AppDelegate.m */; };
 		35B16E7D234BC80E00F002CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35B16E7B234BC80E00F002CA /* Main.storyboard */; };
 		35B16E7F234BC80F00F002CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35B16E7E234BC80F00F002CA /* Assets.xcassets */; };
@@ -18,6 +21,12 @@
 /* Begin PBXFileReference section */
 		353D69D8234BC906003302F0 /* JLEntry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLEntry.h; sourceTree = "<group>"; };
 		353D69D9234BC906003302F0 /* JLEntry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLEntry.m; sourceTree = "<group>"; };
+		353D69DB234BCF84003302F0 /* JLEntryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLEntryController.h; sourceTree = "<group>"; };
+		353D69DC234BCF84003302F0 /* JLEntryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLEntryController.m; sourceTree = "<group>"; };
+		353D69E0234BD73D003302F0 /* JLEntryListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JLEntryListTableViewController.h; path = "Journal-C/View Controllers/JLEntryListTableViewController.h"; sourceTree = SOURCE_ROOT; };
+		353D69E1234BD73D003302F0 /* JLEntryListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JLEntryListTableViewController.m; path = "Journal-C/View Controllers/JLEntryListTableViewController.m"; sourceTree = SOURCE_ROOT; };
+		353D69E3234BDD30003302F0 /* JLEntryDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLEntryDetailViewController.h; sourceTree = "<group>"; };
+		353D69E4234BDD30003302F0 /* JLEntryDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLEntryDetailViewController.m; sourceTree = "<group>"; };
 		35B16E72234BC80E00F002CA /* Journal-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Journal-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35B16E75234BC80E00F002CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		35B16E76234BC80E00F002CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -48,6 +57,35 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		353D69DE234BCF87003302F0 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				353D69DB234BCF84003302F0 /* JLEntryController.h */,
+				353D69DC234BCF84003302F0 /* JLEntryController.m */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		353D69DF234BCF9B003302F0 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				353D69E0234BD73D003302F0 /* JLEntryListTableViewController.h */,
+				353D69E1234BD73D003302F0 /* JLEntryListTableViewController.m */,
+				353D69E3234BDD30003302F0 /* JLEntryDetailViewController.h */,
+				353D69E4234BDD30003302F0 /* JLEntryDetailViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		35A52056234D9D2C00A49C1C /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				35B16E75234BC80E00F002CA /* AppDelegate.h */,
+				35B16E76234BC80E00F002CA /* AppDelegate.m */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		35B16E69234BC80E00F002CA = {
 			isa = PBXGroup;
 			children = (
@@ -67,7 +105,10 @@
 		35B16E74234BC80E00F002CA /* Journal-C */ = {
 			isa = PBXGroup;
 			children = (
+				35A52056234D9D2C00A49C1C /* Sources */,
 				353D69D7234BC8E9003302F0 /* Model */,
+				353D69DE234BCF87003302F0 /* Model Controllers */,
+				353D69DF234BCF9B003302F0 /* View Controllers */,
 				35B16E8C234BC82800F002CA /* Views */,
 				35B16E8B234BC81B00F002CA /* Resources */,
 			);
@@ -77,8 +118,6 @@
 		35B16E8B234BC81B00F002CA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				35B16E75234BC80E00F002CA /* AppDelegate.h */,
-				35B16E76234BC80E00F002CA /* AppDelegate.m */,
 				35B16E7E234BC80F00F002CA /* Assets.xcassets */,
 				35B16E80234BC80F00F002CA /* LaunchScreen.storyboard */,
 				35B16E83234BC80F00F002CA /* Info.plist */,
@@ -168,7 +207,10 @@
 			files = (
 				35B16E85234BC80F00F002CA /* main.m in Sources */,
 				35B16E77234BC80E00F002CA /* AppDelegate.m in Sources */,
+				353D69E5234BDD30003302F0 /* JLEntryDetailViewController.m in Sources */,
+				353D69DD234BCF84003302F0 /* JLEntryController.m in Sources */,
 				353D69DA234BC906003302F0 /* JLEntry.m in Sources */,
+				353D69E2234BD73D003302F0 /* JLEntryListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

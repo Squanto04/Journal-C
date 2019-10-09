@@ -10,16 +10,37 @@
 
 @implementation JLEntry
 
-- (instancetype)initWithTitle:(NSString *)title body:(NSString *)body
+- (instancetype)initWithTitle:(NSString *)title body:(NSString *)body timestamp:(NSDate *)timestamp
 {
     self = [super init];
     if (self)
     {
         _title = title;
         _body = body;
-        _timestamp = [[NSDate alloc] init];
+        _timestamp = [NSDate new];
     }
     return self;
 }
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary
+{
+    NSString *title = dictionary[titleKey];
+    NSString *body = dictionary[bodyKey];
+    NSDate *timestamp = dictionary[timeStampKey];
+    return [self initWithTitle:title body:body timestamp:timestamp];
+}
+
+- (NSDictionary *)dictionaryCopy
+{
+    return @{titleKey: self.title,
+             bodyKey: self.body,
+             timeStampKey: self.timestamp};
+}
+
+- (BOOL)isEqual:(id)object
+{
+    if (![object isKindOfClass:[JLEntry class]]) { return NO; }
+    // Shortcut to comparing all properties one by one. We let NSDictionary do it for us
+    return [[self dictionaryCopy] isEqualToDictionary:[(JLEntry *)object dictionaryCopy]];
+}
 @end

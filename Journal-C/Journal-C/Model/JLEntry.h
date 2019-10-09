@@ -10,14 +10,22 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+static NSString * const titleKey = @"title";
+static NSString * const bodyKey = @"body";
+static NSString * const timeStampKey = @"timestamp";
+
 @interface JLEntry : NSObject
 
-@property (nonatomic, copy, readonly) NSString * title;
-@property (nonatomic, copy, readonly) NSString * body;
-@property (nonatomic, copy, readonly) NSDate * timestamp;
+@property (nonatomic, copy) NSString * title;
+@property (nonatomic, copy) NSString * body;
+@property (nonatomic, copy) NSDate * timestamp;
 
 - (instancetype)initWithTitle:(NSString *) title
-                         body:(NSString *) body;
+                         body:(NSString *) body
+                    timestamp:(NSDate *) timestamp;
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+- (NSDictionary *)dictionaryCopy;
 
 @end
 
